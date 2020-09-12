@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  routes 'post_images#index'
+  root 'post_images#index'
+  resources :post_images, only: [:new, :create, :index, :show]
 end
